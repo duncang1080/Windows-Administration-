@@ -51,18 +51,23 @@ I switch to User 1 and open the file.
 <br>
 As User 1, I open the .txt file and I find that I am still able to edit and save. Which is supposed to be restricted. 
 <img width="1429" height="744" alt="image" src="https://github.com/user-attachments/assets/ae54e7c5-89b0-409b-b826-7dbd931e09b2" />
-I right click `Windows Admin Lab` folder and go to `Properties>Security>Advanced`
+In the `Window Admin Lab` folder, right click it and select `Properties>Security>Advanced` In Advanced, find the "Permissions" Tab and open it. 
 <br>
-In `Advanced` go into the "Effective Access" tab, then select "Select a user"
-<img width="915" height="606" alt="image" src="https://github.com/user-attachments/assets/cea03a9e-912b-4494-8066-833266b43c07" />
+Taking note of "Authenticated Users" having modification permissions is worth investigating as only admins are allowed to have modify permissions. 
+<img width="928" height="618" alt="image" src="https://github.com/user-attachments/assets/d9f5ac8a-9390-4220-a97e-86f8f5a92269" />
 <br>
+Logging back in on the admin account, I change those permissions. 
 <br>
-Select "Advanced"
+I go back to the folder, `Properties>Security` Select "Advanced".
 <br>
-<img width="543" height="293" alt="image" src="https://github.com/user-attachments/assets/46b13679-94e0-44c9-900c-1f462a5bb540" />
+<img width="423" height="566" alt="image" src="https://github.com/user-attachments/assets/c8a386bd-ad1d-43ea-8cb7-f5b54cf35f6f" />
 <br>
-In "Advanced" select "Find Now"
+In "Advanced" I select "Authenticated Users" and then "Remove" but an error pops up that says I cant remove because the object is inheriting permissions from its parent.
+<img width="1047" height="609" alt="image" src="https://github.com/user-attachments/assets/c5129495-5ced-4f80-b1f2-f7e351516c9b" />
 <br>
-<img width="612" height="691" alt="image" src="https://github.com/user-attachments/assets/911e4db2-8f82-498c-9f59-44f2902afa0a" />
+What to do now is select "Disable inheritance" and then "Remove all inherited permissions from this object".
+<img width="1029" height="534" alt="image" src="https://github.com/user-attachments/assets/a2baf8d4-cdff-42d7-b24d-41ec937c0777" />
 <br>
-Select "OK" to close the window and then I'm back on the "Effective Access" Tab
+Select "Apply" then OK to close the window. 
+<br>
+Back in User 1, I check to see if the changes have worked. 
