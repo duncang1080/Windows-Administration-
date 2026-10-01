@@ -71,3 +71,5 @@ What to do now is select "Disable inheritance" and then "Remove all inherited pe
 Select "Apply" then OK to close the window. 
 <br>
 Back in User 1, I check to see if the changes have worked. 
+<img width="1429" height="746" alt="image" src="https://github.com/user-attachments/assets/bf09796d-3ff5-4fb1-aaf9-cd856c54c686" />
+User 1 can no longer save changes on the notepad document. 
